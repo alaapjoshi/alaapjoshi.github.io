@@ -1,446 +1,531 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.svg" />
+    <title>Alaap Joshi · Software Engineer</title>
+    <meta
+      name="description"
+      content="Alaap Joshi is a Computer Science and Cognitive Science student at Rutgers building computer vision, mobile, and hardware projects. 15 hackathon awards across 22 competitions."
+    />
+    <meta name="author" content="Alaap Joshi" />
+    <link rel="canonical" href="https://alaapjoshi.github.io/" />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Alaap Joshi · Software Engineer" />
+    <meta
+      property="og:description"
+      content="CS + Cognitive Science at Rutgers. Computer vision, mobile apps, and hardware. 15 hackathon awards."
+    />
+    <meta property="og:url" content="https://alaapjoshi.github.io/" />
+    <meta property="og:image" content="https://alaapjoshi.github.io/img/hero.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic"
-      rel="stylesheet"
-    />
-    <script src="/index.js" defer></script>
-    <link rel="stylesheet" href="/style.css" />
-    <title>Alaap | portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+
+    <!-- Structured data so search engines know who this page is about -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alaap Joshi",
+        "url": "https://alaapjoshi.github.io/",
+        "email": "mailto:alaapjoshi@gmail.com",
+        "alumniOf": "Rutgers University–New Brunswick",
+        "sameAs": [
+          "https://github.com/alaapjoshi",
+          "https://www.linkedin.com/in/alaapjoshi",
+          "https://devpost.com/alaapjoshi"
+        ]
+      }
+    </script>
   </head>
-  <body class="text-white bg-charcoal-100 font-poppins">
-    <!-- Navigation menu -->
+  <body>
+    <!-- Icon sprite: referenced below with <use href="#icon-..."> -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.3-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5a4.3 4.3 0 0 1 .1 3.2 4.6 4.6 0 0 1 1.3 3.2c0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"
+        />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.3ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.6V9h3.5v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"
+        />
+      </symbol>
+      <symbol id="icon-devpost" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M6 0 0 12l6 12h12l6-12-6-12H6Zm.9 5.6h4.5c3.3 0 5.8 2 5.8 6.4s-2.5 6.4-5.8 6.4H6.9V5.6Zm2.6 2.5v7.8h1.8c2 0 3.2-1.2 3.2-3.9S13.3 8.1 11.3 8.1H9.5Z"
+        />
+      </symbol>
+      <symbol id="icon-mail" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3 5h18v14H3zM3 6l9 7 9-7"
+        />
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8l-5-5Zm0 0v5h5M9 13h6M9 17h6"
+        />
+      </symbol>
+      <symbol id="icon-trophy" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"
+        />
+      </symbol>
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M7 17 17 7M8 7h9v9"
+        />
+      </symbol>
+    </svg>
 
-    <nav
-      class="fixed z-10 flex items-center justify-end w-full bg-charcoal-100/50 backdrop-blur-md sm:justify-center font-roboto"
-    >
-      <ul class="hidden py-5 sm:flex gap-14">
-        <li>
-          <a href="#">home</a>
-        </li>
-        <li>
-          <a href="#about">about</a>
-        </li>
-        <li>
-          <a href="#projects">projects</a>
-        </li>
-        <li>
-          <a href="#contact">contact</a>
-        </li>
-      </ul>
-      <button id="open-menu" class="py-5 pr-5">
-        <img src="/img/icons/menu.svg" alt="" class="sm:hidden w-9" />
-      </button>
-      <div
-        id="menu"
-        class="flex translate-x-full right-0 top-0 sm:hidden fixed h-screen w-[65vw] bg-charcoal-100/50 backdrop-blur-md justify-center pt-24 rounded-l-lg duration-300 ease-in-out"
-      >
-        <button id="close-menu" class="absolute top-5 right-5">
-          <img src="/img/icons/close.svg" alt="" class="w-9" />
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Navigation -->
+    <header class="nav" id="nav">
+      <div class="container nav__inner">
+        <a href="#top" class="nav__brand" aria-label="Alaap Joshi, back to top">AJ</a>
+        <nav aria-label="Main">
+          <ul class="nav__links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <a class="nav__resume" href="assets/Alaap_Joshi_Resume.pdf" target="_blank" rel="noopener"
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Open menu"
+        >
+          <span></span><span></span>
         </button>
-        <ul class="flex flex-col items-center py-5 gap-14">
-          <li>
-            <a href="#">home</a>
-          </li>
-          <li>
-            <a href="#about">about</a>
-          </li>
-          <li>
-            <a href="#projects">projects</a>
-          </li>
-          <li>
-            <a href="#contact">contact</a>
-          </li>
-        </ul>
       </div>
-    </nav>
-    <main>
-      <!-- Hero section -->
+    </header>
 
-      <section id="home" class="relative h-screen overflow-hidden">
-        <img
-          src="img/hero.jpg"
-          alt=""
-          class="absolute top-0 left-0 object-cover w-screen h-screen pointer-events-none -z-20"
-        />
-        <div
-          class="absolute flex flex-col items-start gap-2 top-72 sm:top-96 left-5 sm:left-20 lg:left-40 xl:left-56 animate-fadeInUp"
-        >
-          <h1 class="-mb-1 text-3xl font-semibold sm:text-6xl md:text-8xl">
-            Hi, I'm Alaap
-          </h1>
-          <h2
-            class="font-roboto text-neutral-400 text-md sm:text-lg md:text-xl"
-          >
-            FullStack Developer
-          </h2>
-          <a href="#projects">
-            <button class="px-4 py-1 rounded-lg bg-pine sm:py-2">
-              check out my work
-            </button>
-          </a>
-        </div>
-        <div
-          class="absolute top-0 left-0 w-screen h-screen pointer-events-none bg-gradient-to-t from-charcoal-100 to-transparent backdrop-blur-sm -z-10"
-        />
-      </section>
-      <!-- About section -->
-
-      <section
-        id="about"
-        class="flex flex-col gap-10 justify-center items-center max-w-[90rem] mx-auto py-28 md:py-56"
-      >
-        <h1
-          class="text-4xl font-semibold underline sm:text-6xl md:text-8xl decoration-pine"
-        >
-          App Development
-        </h1>
-        <div
-          class="flex flex-col gap-5 border-[3px] border-neutral-400 p-5 w-11/12 md:w-2/3"
-        >
-          <p class="font-roboto">
-            I have been developing apps for the past 3 years. I am experienced in developing apps for Android, IOS and React Native. I have worked on many projects, including large and complex ones. 
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__content">
+          <p class="eyebrow">Rutgers University–New Brunswick · CS + Cognitive Science</p>
+          <h1 class="hero__title">Alaap Joshi</h1>
+          <p class="hero__lede">
+            I build software that touches the real world: computer vision on Arduinos, mobile apps
+            backed by Firebase, and image pipelines for biomedical research.
           </p>
-          <div
-            class="grid grid-cols-2 pt-6 border-t-2 sm:grid-cols-3 md:grid-cols-5 gap-y-5 border-neutral-400"
-          >
-            <div class="flex flex-col items-center gap-4">
-              <img
-                src="/img/icons/swift.svg"
-                alt="Machine learning"
-                class="w-18"
-              />
-              <p
-                class="px-2 py-1 text-xs text-center rounded-lg sm:text-sm font-roboto bg-white/10"
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">See my work</a>
+            <a class="btn" href="assets/Alaap_Joshi_Resume.pdf" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#icon-file" /></svg>Resume
+            </a>
+          </div>
+          <ul class="socials" aria-label="Profiles">
+            <li>
+              <a href="https://github.com/alaapjoshi" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg class="icon"><use href="#icon-github" /></svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/alaapjoshi"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
               >
-                Swift
-              </p>
-            </div>
-            <div class="flex flex-col items-center gap-4">
-              <img src="/img/icons/cup.and.saucer.fill.svg" alt="Java" class="w-16" />
-              
-              <p
-                class="px-2 py-1 text-xs text-center rounded-lg sm:text-sm font-roboto bg-white/10"
-              >
-                Java
-              </p>
-            </div>
-            <div class="flex flex-col items-center padding">
-              <img
-                src="/img/icons/atom.svg"
-                alt="React Native"
-                class="w-17"
-              />
-              <p
-                class="px-2 py-1 text-xs text-center rounded-lg sm:text-sm font-roboto bg-white/10 margin"
-              >
-                React Native
-              </p>
-            </div>
-            <div class="flex flex-col items-center gap-4">
-              <img src="/img/icons/server.rack.svg" alt="Git" class="w-16" />
-              <p
-                class="px-2 py-1 text-xs text-center rounded-lg sm:text-sm font-roboto bg-white/10"
-              >
-                Firebase
-              </p>
-            </div>
-            <div class="flex flex-col items-center padding">
-              <img
-                src="/img/icons/git.svg"
-                alt="Data structures"
-                class="w-15"
-              />
-              <p
-                class="px-2 py-1 text-xs text-center rounded-lg sm:text-sm font-roboto bg-white/10"
-              >
-                Git
-              </p>
-            </div>
+                <svg class="icon"><use href="#icon-linkedin" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://devpost.com/alaapjoshi" target="_blank" rel="noopener" aria-label="Devpost">
+                <svg class="icon"><use href="#icon-devpost" /></svg>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:alaapjoshi@gmail.com" aria-label="Email">
+                <svg class="icon"><use href="#icon-mail" /></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <dl class="container stats">
+          <div class="stat">
+            <dt>Hackathon awards</dt>
+            <dd>15</dd>
+          </div>
+          <div class="stat">
+            <dt>Hackathons competed</dt>
+            <dd>22</dd>
+          </div>
+          <div class="stat">
+            <dt>MIT Data Science Competition</dt>
+            <dd>Top 10</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about">
+        <div class="container split">
+          <h2 class="section__title">About</h2>
+          <div class="prose reveal">
+            <p>
+              I'm studying Computer Science and Cognitive Science at Rutgers–New Brunswick (Class of
+              2029). Most of what I build sits where software meets hardware: a YOLOv5 model that
+              opens the right trash lid, an ultrasonic sensor that pings your phone, a scanner that
+              digitizes paper records.
+            </p>
+            <p>
+              Right now I'm a research assistant at Robert Wood Johnson Medical School, where I
+              segment fluorescence microscopy images with Python and Cellpose. I'm also on the board
+              of the Rutgers Organization of Cloud Computing, teaching AWS and Azure.
+            </p>
+            <p class="interests-label">Outside of code</p>
+            <ul class="chips" aria-label="Interests">
+              <li>Inter Milan</li>
+              <li>Tennis</li>
+              <li>Golf</li>
+              <li>Chess</li>
+              <li>Tabla</li>
+              <li>Rap / R&amp;B</li>
+              <li>Concerts</li>
+              <li>Streetwear</li>
+              <li>Sneaker collecting</li>
+            </ul>
           </div>
         </div>
       </section>
-      <!-- Projects section -->
 
-      <section
-        id="projects"
-        class="max-w-[90rem] mx-auto flex flex-col gap-10 py-28 md:py-56"
-      >
-        <div class="flex flex-col items-center gap-4 md:items-start">
-          <h1
-            class="text-4xl font-semibold underline sm:text-6xl md:text-8xl decoration-pine"
-          >
-            Projects
-          </h1>
-          <h2 class="text-md md:text-lg font-roboto">
-            Here's some of my work:
-          </h2>
-        </div>
-        <div
-          class="grid grid-cols-1 px-5 md:grid-cols-2 xl:grid-cols-3 gap-y-12 md:gap-x-5 xl:gap-x-8 font-roboto md:px-0"
-        >
-          <article
-            class="relative flex flex-col items-start gap-8 px-4 pt-4 pb-10 transition duration-150 bg-white border-b-8 rounded-lg text-charcoal-200 border-pine hover:scale-105"
-          >
-            <div class="flex flex-col">
-              <span class="text-xl sm:text-2xl text-charcoal-200/50"
-                >Gitmaster511/</span
-              >
-              <!-- Project title  -->
-              <span class="text-xl sm:text-2xl text-charcoal-200"
-                >Zardon Vision</span
-              >
-            </div>
-            <!-- Project link -->
-            <a href="https://github.com/Gitmaster511/Zardon-Vision" target="_blank">
-              <button
-                class="border-[3px] border-charcoal-200 rounded-lg py-1 px-3"
-              >
-                view source
-              </button>
-            </a>
-            <div
-              class="absolute w-16 p-3 rounded-lg top-4 right-4 bg-charcoal-200"
-            >
-              <!-- Project icon -->
-              <img
-                src="/img/icons/eyeglasses.svg"
-                alt="Perceptron"
-                class="w-full"
-              />
-            </div>
-            <img
-              src="/img/icons/trash.slash.svg"
-              alt=""
-              class="absolute w-5 bottom-4 right-4"
-            />
-          </article>
-          <article
-            class="relative flex flex-col items-start gap-8 px-4 pt-4 pb-10 transition duration-150 bg-white border-b-8 rounded-lg text-charcoal-200 border-pine hover:scale-105"
-          >
-            <div class="flex flex-col">
-              <span class="text-xl sm:text-2xl text-charcoal-200/50"
-                >Gitmaster511/</span
-              >
-              <!-- Project title -->
-              <span class="text-xl sm:text-2xl text-charcoal-200"
-                >Intellibin</span
-              >
-            </div>
-            <!-- Project link -->
-            <a
-              href="https://github.com/Gitmaster511/Intellibin"
-              target="_blank"
-            >
-              <button
-                class="border-[3px] border-charcoal-200 rounded-lg py-1 px-3"
-              >
-                view source
-              </button>
-            </a>
-            <div
-              class="absolute w-16 p-3 rounded-lg top-4 right-4 bg-charcoal-200"
-            >
-              <!-- Project icon -->
-              <img
-                src="/img/icons/cpu.svg"
-                alt="Perceptron"
-                class="w-full"
-              />
-            </div>
-            <img
-              src="/img/icons/ghlogo.svg"
-              alt=""
-              class="absolute w-5 bottom-4 right-4"
-            />
-          </article>
-          <article
-            class="relative flex flex-col items-start gap-8 px-4 pt-4 pb-10 transition duration-150 bg-white border-b-8 rounded-lg text-charcoal-200 border-pine hover:scale-105"
-          >
-            <div class="flex flex-col">
-              <span class="text-xl sm:text-2xl text-charcoal-200/50"
-                >Gitmaster511/</span
-              >
-              <!-- Project title -->
-              <span class="text-xl sm:text-2xl text-charcoal-200"
-                >SustainableSwap</span
-              >
-            </div>
-            <!-- Project link -->
-            <a
-              href="https://github.com/Gitmaster511/SustainableSwap"
-              target="_blank"
-            >
-              <button
-                class="border-[3px] border-charcoal-200 rounded-lg py-1 px-3"
-              >
-                view source
-              </button>
-            </a>
-            <div
-              class="absolute w-16 p-3 rounded-lg top-4 right-4 bg-charcoal-200"
-            >
-              <!-- Project icon -->
-              <img
-                src="/img/icons/globe.svg"
-                alt="Perceptron"
-                class="w-full"
-              />
-            </div>
-            <img
-              src="/img/icons/ghlogo.svg"
-              alt=""
-              class="absolute w-5 bottom-4 right-4"
-            />
-          </article>
-          <article
-            class="relative flex flex-col items-start gap-8 px-4 pt-4 pb-10 transition duration-150 bg-white border-b-8 rounded-lg text-charcoal-200 border-pine hover:scale-105"
-          >
-            <div class="flex flex-col">
-              <span class="text-xl sm:text-2xl text-charcoal-200/50"
-                >Gitmaster511/</span
-              >
-              <!-- Project title -->
-              <span class="text-xl sm:text-2xl text-charcoal-200">Eco Sort</span>
-            </div>
-            <!-- Project link -->
-            <a href="https://github.com/Gitmaster511/EcoSort" target="_blank">
-              <button
-                class="border-[3px] border-charcoal-200 rounded-lg py-1 px-3"
-              >
-                view source
-              </button>
-            </a>
-            <div
-              class="absolute w-16 p-3 rounded-lg top-4 right-4 bg-charcoal-200"
-            >
-              <!-- Project icon -->
-              <img
-                src="/img/icons/globe.svg"
-                alt="Perceptron"
-                class="w-full"
-              />
-            </div>
-            <img
-              src="/img/icons/ghlogo.svg"
-              alt=""
-              class="absolute w-5 bottom-4 right-4"
-            />
-          </article>
-          <article
-            class="relative flex flex-col items-start gap-8 px-4 pt-4 pb-10 transition duration-150 bg-white border-b-8 rounded-lg text-charcoal-200 border-pine hover:scale-105"
-          >
-            <div class="flex flex-col">
-              <span class="text-xl sm:text-2xl text-charcoal-200/50"
-                >Gitmaster511/</span
-              >
-              <!-- Project title -->
-              <span class="text-xl sm:text-2xl text-charcoal-200"
-                >Scouter App 2023</span
-              >
-            </div>
-            <!-- Project link -->
-            <a
-              href="https://github.com/Gitmaster511/Scouter-App-2023"
-              target="_blank"
-            >
-              <button
-                class="border-[3px] border-charcoal-200 rounded-lg py-1 px-3"
-              >
-                view source
-              </button>
-            </a>
-            <div
-              class="absolute w-16 p-3 rounded-lg top-4 right-4 bg-charcoal-200"
-            >
-              <!-- Project icon -->
-              <img
-                src="/img/icons/note.text.svg"
-                alt="Perceptron"
-                class="w-full"
-              />
-            </div>
-            <img
-              src="/img/icons/ghlogo.svg"
-              alt=""
-              class="absolute w-5 bottom-4 right-4"
-            />
-          </article>
-          <article
-            class="relative flex flex-col items-start gap-8 px-4 pt-4 pb-10 transition duration-150 bg-white border-b-8 rounded-lg text-charcoal-200 border-pine hover:scale-105"
-          >
-            <div class="flex flex-col">
-              <span class="text-xl sm:text-2xl text-charcoal-200/50"
-                >Gitmaster511/</span
-              >
-              <!-- Project title -->
-              <span class="text-xl sm:text-2xl text-charcoal-200">Portel</span>
-            </div>
-            <!-- Project link -->
-            <a href="https://github.com/Gitmaster511/Portel" target="_blank">
-              <button
-                class="border-[3px] border-charcoal-200 rounded-lg py-1 px-3"
-              >
-                view source
-              </button>
-            </a>
-            <div
-              class="absolute w-16 p-3 rounded-lg top-4 right-4 bg-charcoal-200"
-            >
-              <!-- Project icon -->
-              <img src="/img/icons/message.fill.svg" alt="Perceptron" class="w-full" />
-            </div>
-            <img
-              src="/img/icons/ghlogo.svg"
-              alt=""
-              class="absolute w-5 bottom-4 right-4"
-            />
-          </article>
+      <!-- Experience -->
+      <section class="section" id="experience">
+        <div class="container split">
+          <h2 class="section__title">Experience</h2>
+          <div>
+            <ol class="timeline">
+              <li class="role reveal">
+                <div class="role__head">
+                  <h3>Undergraduate Research Assistant</h3>
+                  <span class="role__date">Jul 2026 – Present</span>
+                </div>
+                <p class="role__org">Robert Wood Johnson Medical School</p>
+                <ul>
+                  <li>
+                    Analyzed <strong>250+ fluorescence microscopy images</strong> with Python,
+                    scikit-image, and Cellpose for cell segmentation.
+                  </li>
+                  <li>
+                    Automated thresholding pipelines that cut manual image-analysis time by
+                    <strong>23%</strong> and quantified cell area and mean fluorescence intensity.
+                  </li>
+                </ul>
+              </li>
+              <li class="role reveal">
+                <div class="role__head">
+                  <h3>Software Engineering Intern</h3>
+                  <span class="role__date">Jun 2026 – Aug 2026</span>
+                </div>
+                <p class="role__org">Ipser Labs · Remote</p>
+                <ul>
+                  <li>
+                    Built React Native scanning and validation workflows that digitized
+                    <strong>1,000+ land-ownership and debt records</strong>.
+                  </li>
+                  <li>
+                    Trimmed assets and dependencies to cut app bundle size by <strong>11%</strong>,
+                    improving load time and consistency across customer environments.
+                  </li>
+                </ul>
+              </li>
+              <li class="role reveal">
+                <div class="role__head">
+                  <h3>Tutor and Mentor</h3>
+                  <span class="role__date">May 2024 – Aug 2025</span>
+                </div>
+                <p class="role__org">theCoderSchool · Montgomery, NJ</p>
+                <ul>
+                  <li>
+                    Taught <strong>60+ students</strong> ages 6–18 Python, Java, web development, and
+                    algorithms through hands-on projects.
+                  </li>
+                  <li>Delivered <strong>200+ private and group sessions</strong>.</li>
+                </ul>
+              </li>
+            </ol>
+
+            <h3 class="subhead">Leadership</h3>
+            <ul class="leadership">
+              <li class="reveal">
+                <div class="role__head">
+                  <h4>Board Member · Rutgers Organization of Cloud Computing</h4>
+                  <span class="role__date">Jan 2026 – Present</span>
+                </div>
+                <p>Build AWS and Azure curriculum and run hands-on cloud deployment workshops.</p>
+              </li>
+              <li class="reveal">
+                <div class="role__head">
+                  <h4>App Development Lead · FIRST Robotics Team 75</h4>
+                  <span class="role__date">2022 – 2024</span>
+                </div>
+                <p>Led the React Native/Firebase scouting app the team used for match strategy.</p>
+              </li>
+              <li class="reveal">
+                <div class="role__head">
+                  <h4>President · Hillsborough High School CS Club</h4>
+                  <span class="role__date">2023 – 2024</span>
+                </div>
+                <p>Ran programming workshops and coached hackathon teams from idea to demo.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <!-- Contact section -->
-
-      <footer id="contact" class="py-20 bg-charcoal-300">
-        <div class="max-w-[90rem] mx-auto flex flex-col items-center gap-10">
-          <h1
-            class="text-4xl font-semibold underline sm:text-6xl md:text-8xl decoration-pine"
-          >
-            Contact
-          </h1>
-          <div class="flex flex-col items-center gap-8 sm:flex-row">
-            <a
-              href="https://www.github.com/Gitmaster511"
-              target="_blank"
-              class="flex items-center gap-2"
-            >
-              <img
-                src="/img/icons/github.svg"
-                alt=""
-                class="w-6 sm:w-8"
-              /><span class="font-roboto">Gitmaster511</span>
-            </a>
-            <!-- Add email here -->
-            <a href="mailto:email@gmail.com" class="flex items-center gap-2">
-              <img src="/img/icons/email.svg" alt="" class="w-6 sm:w-8" />
-              <!-- Add email here -->
-              <span class="font-roboto">email@gmail.com</span>
-            </a>
-            <a href="https://discord.com/users/1071226400545189989" class="flex items-center gap-2">
-              <img src="img/icons/discord.svg" alt="" class="w-6 sm:w-8"><span class="font-roboto">Flyer57#1108</span>
-            </a>
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section__header">
+            <h2 class="section__title">Projects</h2>
+            <div class="filters" role="group" aria-label="Filter projects">
+              <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+              <button class="filter" data-filter="winner" aria-pressed="false">Award winners</button>
+              <button class="filter" data-filter="ml" aria-pressed="false">ML / Vision</button>
+              <button class="filter" data-filter="mobile" aria-pressed="false">Mobile</button>
+              <button class="filter" data-filter="hardware" aria-pressed="false">Hardware</button>
+            </div>
           </div>
+
+          <div class="grid" id="project-grid">
+            <article class="card reveal" data-tags="winner ml mobile hardware">
+              <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>1st Place Overall · MontyHacks VII</p>
+              <h3 class="card__title">Haven</h3>
+              <p class="card__body">
+                DIY home security. An Arduino ultrasonic sensor trips the alarm, a webcam running
+                YOLOv5 captures detections, and both stream through Firebase to a React Native app.
+              </p>
+              <ul class="tags">
+                <li>React Native</li><li>YOLOv5</li><li>Arduino</li><li>Firebase</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://github.com/alaapjoshi/Haven" target="_blank" rel="noopener">Code<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                <a href="https://devpost.com/software/haven-nruqbz" target="_blank" rel="noopener">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="card reveal" data-tags="winner ml hardware">
+              <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>1st Place Sustainability · HackMHS</p>
+              <h3 class="card__title">Intellibin → BinSense</h3>
+              <p class="card__body">
+                A smart bin that classified 23 waste types with YOLOv5 and drove Arduino sorting flaps
+                in real time. Later rebuilt as BinSense, with confidence thresholds, cooldowns, and a
+                live HUD.
+              </p>
+              <ul class="tags">
+                <li>PyTorch</li><li>YOLOv5</li><li>Arduino</li><li>3D Printing</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://github.com/alaapjoshi/BinSense" target="_blank" rel="noopener">Code<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                <a href="https://devpost.com/software/intellibin" target="_blank" rel="noopener">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="card reveal" data-tags="winner ml mobile">
+              <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>2nd Place Overall · MontyHacks VI</p>
+              <h3 class="card__title">ZardonVision</h3>
+              <p class="card__body">
+                A voice-controlled accessibility app for visually impaired users. It uses OCR and
+                object detection to describe the scene out loud.
+              </p>
+              <ul class="tags">
+                <li>SwiftUI</li><li>UIKit</li><li>Flask</li><li>PyTorch</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://devpost.com/software/zardon-vision" target="_blank" rel="noopener">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="card reveal" data-tags="winner mobile">
+              <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>2nd Place · MEGA Hackathon 2023</p>
+              <h3 class="card__title">SustainableSwap</h3>
+              <p class="card__body">
+                A marketplace for used electronics parts. It shows the drive time to each listing and
+                maps nearby repair shops, so working parts get reused.
+              </p>
+              <ul class="tags">
+                <li>React Native</li><li>Expo</li><li>Firebase</li><li>Google Maps APIs</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://github.com/alaapjoshi/SustainableSwap" target="_blank" rel="noopener">Code<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                <a href="https://devpost.com/software/sustainableswap" target="_blank" rel="noopener">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+              </div>
+            </article>
+
+            <article class="card reveal" data-tags="mobile">
+              <p class="badge badge--plain">FIRST Robotics Competition · Team 75</p>
+              <h3 class="card__title">75watch</h3>
+              <p class="card__body">
+                The team's scouting app. Scouts log match observations on any phone, results sync to
+                Firebase in real time, and strategy reviews the combined data after each event.
+              </p>
+              <ul class="tags">
+                <li>React Native</li><li>Expo</li><li>Firebase</li>
+              </ul>
+            </article>
+
+            <article class="card reveal" data-tags="hardware">
+              <p class="badge badge--plain">HackRU Fall 2026</p>
+              <h3 class="card__title">PT@Home</h3>
+              <p class="card__body">
+                A battery-powered wearable for at-home physical therapy. Two MPU gyroscopes on an
+                nRF52832 board track each exercise, mirror it on a 3D avatar, and let a therapist
+                review progress remotely.
+              </p>
+              <ul class="tags">
+                <li>nRF52832</li><li>MPU gyroscopes</li><li>3D avatar</li>
+              </ul>
+              <div class="card__links">
+                <a href="https://devpost.com/software/pt-home" target="_blank" rel="noopener">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+              </div>
+            </article>
+          </div>
+          <p class="empty" id="project-empty" hidden>No projects match that filter.</p>
+
+          <!-- Smaller hackathon wins -->
+          <h3 class="subhead">More hackathon wins</h3>
+          <ul class="wins">
+            <li class="reveal">
+              <a href="https://devpost.com/software/zardon-vision-1rs6n2" target="_blank" rel="noopener">
+                <span class="wins__name">ZardonVision</span>
+                <span class="wins__prize">3rd Place Overall · PantherHack 2023</span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a href="https://devpost.com/software/crop-prophet" target="_blank" rel="noopener">
+                <span class="wins__name">Crop Prophet</span>
+                <span class="wins__prize">Innovator's Excellence Award · YouthCodeX</span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a href="https://devpost.com/software/glob-ed" target="_blank" rel="noopener">
+                <span class="wins__name">Glob-ED</span>
+                <span class="wins__prize">Track Winner · MEGA Hackathon 2023 Summer</span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a href="https://devpost.com/software/techcycle" target="_blank" rel="noopener">
+                <span class="wins__name">TechCycle</span>
+                <span class="wins__prize">Solo Prize · PeddieHacks 2023</span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a href="https://devpost.com/software/portel-g5l0pi" target="_blank" rel="noopener">
+                <span class="wins__name">Portel</span>
+                <span class="wins__prize">Best Domain Name · hackPHS 2022</span>
+              </a>
+            </li>
+          </ul>
+          <p class="more-link">
+            <a href="https://devpost.com/alaapjoshi" target="_blank" rel="noopener"
+              >All projects on Devpost<svg class="icon"><use href="#icon-arrow" /></svg
+            ></a>
+          </p>
         </div>
-      </footer>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="skills">
+        <div class="container split">
+          <h2 class="section__title">Skills</h2>
+          <dl class="skills reveal">
+            <div>
+              <dt>Languages</dt>
+              <dd>Python, Java, JavaScript, TypeScript, C++, SQL, HTML/CSS, Swift, Bash, LaTeX</dd>
+            </div>
+            <div>
+              <dt>Web &amp; Mobile</dt>
+              <dd>React, React Native, Expo, Flask, FastAPI, Firebase, PostgreSQL, Svelte</dd>
+            </div>
+            <div>
+              <dt>ML &amp; Data</dt>
+              <dd>PyTorch, NumPy, pandas, scikit-image, Cellpose, OpenCV, Jupyter</dd>
+            </div>
+            <div>
+              <dt>Tools</dt>
+              <dd>Git, Docker, AWS, Arduino, Xcode, Android Studio, Linux, Wireshark</dd>
+            </div>
+            <div>
+              <dt>Coursework</dt>
+              <dd>
+                Data Structures, Computer Architecture, Data Management for Data Science, Discrete
+                Structures, Linear Algebra, Calculus I–II, Physics I–II
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
     </main>
+
+    <!-- Contact -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <h2 class="footer__title">Let's talk.</h2>
+        <p class="footer__lede">
+          I'm looking for software engineering and research internships. The fastest way to reach me
+          is email.
+        </p>
+        <a class="btn btn--primary" href="mailto:alaapjoshi@gmail.com">
+          <svg class="icon"><use href="#icon-mail" /></svg>alaapjoshi@gmail.com
+        </a>
+        <ul class="socials socials--footer" aria-label="Profiles">
+          <li><a href="https://github.com/alaapjoshi" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/alaapjoshi" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://devpost.com/alaapjoshi" target="_blank" rel="noopener">Devpost</a></li>
+          <li><a href="assets/Alaap_Joshi_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+        <p class="footer__fine">© <span id="year">2026</span> Alaap Joshi</p>
+      </div>
+    </footer>
   </body>
 </html>
