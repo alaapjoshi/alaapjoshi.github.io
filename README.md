@@ -98,7 +98,7 @@ flowchart LR
 - Run a GitHub Action that checks for broken links on every push.
 
 ## Author
-**Alaap Joshi** - Computer Science + Cognitive Science, Rutgers University-New Brunswick
+**Alaap Joshi** - Computer Science and Data Science, Rutgers University-New Brunswick
 [GitHub](https://github.com/alaapjoshi) | [LinkedIn](https://linkedin.com/in/alaapjoshi)
 
 ## License

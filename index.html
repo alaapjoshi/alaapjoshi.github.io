@@ -6,7 +6,7 @@
     <title>Alaap Joshi · Software Engineer</title>
     <meta
       name="description"
-      content="Alaap Joshi is a Computer Science and Cognitive Science student at Rutgers building computer vision, mobile, and hardware projects. 15 hackathon awards across 22 competitions."
+      content="Alaap Joshi is a Computer Science and Data Science student at Rutgers building computer vision, mobile, and hardware projects. 15 hackathon awards across 22 competitions."
     />
     <meta name="author" content="Alaap Joshi" />
     <link rel="canonical" href="https://alaapjoshi.github.io/" />
@@ -18,7 +18,7 @@
     <meta property="og:title" content="Alaap Joshi · Software Engineer" />
     <meta
       property="og:description"
-      content="CS + Cognitive Science at Rutgers. Computer vision, mobile apps, and hardware. 15 hackathon awards."
+      content="CS + Data Science at Rutgers. Computer vision, mobile apps, and hardware. 15 hackathon awards."
     />
     <meta property="og:url" content="https://alaapjoshi.github.io/" />
     <meta property="og:image" content="https://alaapjoshi.github.io/img/hero.jpg" />
@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -41,7 +41,7 @@
         "@type": "Person",
         "name": "Alaap Joshi",
         "url": "https://alaapjoshi.github.io/",
-        "email": "mailto:alaapjoshi@gmail.com",
+        "email": "mailto:code.alaap@gmail.com",
         "alumniOf": "Rutgers University–New Brunswick",
         "sameAs": [
           "https://github.com/alaapjoshi",
@@ -149,62 +149,130 @@
     <main id="main">
       <!-- Hero -->
       <section class="hero" id="top">
-        <div class="hero__bg" aria-hidden="true"></div>
-        <div class="container hero__content">
-          <p class="eyebrow">Rutgers University–New Brunswick · CS + Cognitive Science</p>
-          <h1 class="hero__title">Alaap Joshi</h1>
-          <p class="hero__lede">
-            I build software that touches the real world: computer vision on Arduinos, mobile apps
-            backed by Firebase, and image pipelines for biomedical research.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#projects">See my work</a>
-            <a class="btn" href="assets/Alaap_Joshi_Resume.pdf" target="_blank" rel="noopener">
-              <svg class="icon"><use href="#icon-file" /></svg>Resume
-            </a>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">Rutgers University–New Brunswick · CS + Data Science</p>
+            <h1 class="hero__title">Alaap Joshi</h1>
+            <p class="hero__lede">
+              I build software that touches the real world: computer vision on Arduinos, mobile apps
+              backed by Firebase, and image pipelines for biomedical research.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#projects">See my work</a>
+              <a class="btn" href="assets/Alaap_Joshi_Resume.pdf" target="_blank" rel="noopener">
+                <svg class="icon"><use href="#icon-file" /></svg>Resume
+              </a>
+            </div>
+            <ul class="socials" aria-label="Profiles">
+              <li>
+                <a href="https://github.com/alaapjoshi" target="_blank" rel="noopener" aria-label="GitHub">
+                  <svg class="icon"><use href="#icon-github" /></svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/alaapjoshi"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                >
+                  <svg class="icon"><use href="#icon-linkedin" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://devpost.com/alaapjoshi" target="_blank" rel="noopener" aria-label="Devpost">
+                  <svg class="icon"><use href="#icon-devpost" /></svg>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:code.alaap@gmail.com" aria-label="Email">
+                  <svg class="icon"><use href="#icon-mail" /></svg>
+                </a>
+              </li>
+            </ul>
           </div>
-          <ul class="socials" aria-label="Profiles">
-            <li>
-              <a href="https://github.com/alaapjoshi" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg class="icon"><use href="#icon-github" /></svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/alaapjoshi"
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-              >
-                <svg class="icon"><use href="#icon-linkedin" /></svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://devpost.com/alaapjoshi" target="_blank" rel="noopener" aria-label="Devpost">
-                <svg class="icon"><use href="#icon-devpost" /></svg>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:alaapjoshi@gmail.com" aria-label="Email">
-                <svg class="icon"><use href="#icon-mail" /></svg>
-              </a>
-            </li>
-          </ul>
+          <dl class="stats">
+            <div class="stat">
+              <dt>Hackathon awards</dt>
+              <dd>15</dd>
+            </div>
+            <div class="stat">
+              <dt>Hackathons competed</dt>
+              <dd>22</dd>
+            </div>
+            <div class="stat">
+              <dt>MIT Data Science Competition</dt>
+              <dd>Top 10</dd>
+            </div>
+          </dl>
+
+          <!-- Featured: copies of the first four cards in #projects, so keep the two in sync -->
+          <aside class="featured" aria-label="Featured projects">
+            <p class="featured__label"><a href="#projects">Projects</a></p>
+            <ul class="featured__list">
+              <li class="spot">
+                <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>1st Place Overall · MontyHacks VII</p>
+                <p class="spot__title">Haven</p>
+                <p class="spot__body">
+                  DIY home security. An Arduino ultrasonic sensor trips the alarm, a webcam running
+                  YOLOv5 captures detections, and both stream through Firebase to a React Native app.
+                </p>
+                <ul class="tags">
+                  <li>React Native</li><li>YOLOv5</li><li>Arduino</li><li>Firebase</li>
+                </ul>
+                <div class="card__links">
+                  <a href="https://github.com/alaapjoshi/Haven" target="_blank" rel="noopener" aria-label="Code for Haven">Code<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a href="https://devpost.com/software/haven-nruqbz" target="_blank" rel="noopener" aria-label="Devpost page for Haven">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                </div>
+              </li>
+              <li class="spot">
+                <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>1st Place Sustainability · HackMHS</p>
+                <p class="spot__title">Intellibin → BinSense</p>
+                <p class="spot__body">
+                  A smart bin that classified 23 waste types with YOLOv5 and drove Arduino sorting flaps
+                  in real time. Later rebuilt as BinSense, with confidence thresholds, cooldowns, and a
+                  live HUD.
+                </p>
+                <ul class="tags">
+                  <li>PyTorch</li><li>YOLOv5</li><li>Arduino</li><li>3D Printing</li>
+                </ul>
+                <div class="card__links">
+                  <a href="https://github.com/alaapjoshi/BinSense" target="_blank" rel="noopener" aria-label="Code for Intellibin → BinSense">Code<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a href="https://devpost.com/software/intellibin" target="_blank" rel="noopener" aria-label="Devpost page for Intellibin → BinSense">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                </div>
+              </li>
+              <li class="spot">
+                <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>2nd Place Overall · MontyHacks VI</p>
+                <p class="spot__title">ZardonVision</p>
+                <p class="spot__body">
+                  A voice-controlled accessibility app for visually impaired users. It uses OCR and
+                  object detection to describe the scene out loud.
+                </p>
+                <ul class="tags">
+                  <li>SwiftUI</li><li>UIKit</li><li>Flask</li><li>PyTorch</li>
+                </ul>
+                <div class="card__links">
+                  <a href="https://devpost.com/software/zardon-vision" target="_blank" rel="noopener" aria-label="Devpost page for ZardonVision">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                </div>
+              </li>
+              <li class="spot">
+                <p class="badge"><svg class="icon"><use href="#icon-trophy" /></svg>2nd Place · MEGA Hackathon 2023</p>
+                <p class="spot__title">SustainableSwap</p>
+                <p class="spot__body">
+                  A marketplace for used electronics parts. It shows the drive time to each listing and
+                  maps nearby repair shops, so working parts get reused.
+                </p>
+                <ul class="tags">
+                  <li>React Native</li><li>Expo</li><li>Firebase</li><li>Google Maps APIs</li>
+                </ul>
+                <div class="card__links">
+                  <a href="https://github.com/alaapjoshi/SustainableSwap" target="_blank" rel="noopener" aria-label="Code for SustainableSwap">Code<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                  <a href="https://devpost.com/software/sustainableswap" target="_blank" rel="noopener" aria-label="Devpost page for SustainableSwap">Devpost<svg class="icon"><use href="#icon-arrow" /></svg></a>
+                </div>
+              </li>
+            </ul>
+          </aside>
         </div>
-        <dl class="container stats">
-          <div class="stat">
-            <dt>Hackathon awards</dt>
-            <dd>15</dd>
-          </div>
-          <div class="stat">
-            <dt>Hackathons competed</dt>
-            <dd>22</dd>
-          </div>
-          <div class="stat">
-            <dt>MIT Data Science Competition</dt>
-            <dd>Top 10</dd>
-          </div>
-        </dl>
       </section>
 
       <!-- About -->
@@ -213,8 +281,8 @@
           <h2 class="section__title">About</h2>
           <div class="prose reveal">
             <p>
-              I'm studying Computer Science and Cognitive Science at Rutgers–New Brunswick (Class of
-              2029). Most of what I build sits where software meets hardware: a YOLOv5 model that
+              I'm studying Computer Science and Data Science at Rutgers–New Brunswick (Class of
+              2028). Most of what I build sits where software meets hardware: a YOLOv5 model that
               opens the right trash lid, an ultrasonic sensor that pings your phone, a scanner that
               digitizes paper records.
             </p>
@@ -515,8 +583,8 @@
           I'm looking for software engineering and research internships. The fastest way to reach me
           is email.
         </p>
-        <a class="btn btn--primary" href="mailto:alaapjoshi@gmail.com">
-          <svg class="icon"><use href="#icon-mail" /></svg>alaapjoshi@gmail.com
+        <a class="btn btn--primary" href="mailto:code.alaap@gmail.com">
+          <svg class="icon"><use href="#icon-mail" /></svg>code.alaap@gmail.com
         </a>
         <ul class="socials socials--footer" aria-label="Profiles">
           <li><a href="https://github.com/alaapjoshi" target="_blank" rel="noopener">GitHub</a></li>
